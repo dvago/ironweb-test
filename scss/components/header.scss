@@ -1,0 +1,119 @@
+.header {
+  background: $blue;
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  
+  @media (min-width: $screen-tablet) {
+    text-align: left;
+  }
+  &__mobiletoggler {
+    color: white;
+    margin: 10px 0;
+    display: block;
+    position: relative;
+    z-index: 1;
+    
+    &:link,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: aliceblue;
+    }
+  }
+  nav {
+    margin-top: 20px;
+    z-index: 1;
+    
+    @media (min-width: $screen-sm-min) {
+      margin-top: 10px;
+    }
+    li {
+     display: block;
+      padding: 10px 5px;
+      
+      @media (min-width: $screen-tablet) {
+        display: inline-block;
+        padding: 0 2px;
+      }
+      @media (min-width: $screen-sm-min) {
+        padding: 0 4px;
+      }
+      a {
+        color: white;
+        display: block;
+        transition: all .25s ease-in;
+        border-bottom: 1px solid $blue;
+        font-size: 14px;
+        padding: 5px;
+        
+        @media (min-width: $screen-tablet) {
+          font-size: 12px;
+          padding: 4px;
+        }
+        
+        @media (min-width: $screen-sm-min) {
+          padding: 8px;
+          font-size: 14px;
+        }
+        @media (min-width: $screen-md-min) {
+          font-size: 15px;
+        }
+        &.selected,
+        &:hover {
+          text-decoration: none;
+          background: $darkblue;
+          @extend .btn-round;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+        }
+      }
+    }
+  }
+  .btn {
+    color: white;
+    margin-top: 15px;
+    background: $greengradient;
+    @extend .btn-round;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
+.logo {
+  i {
+    display: block;
+    margin: 10px auto;
+    height: 60px;
+    width: 54px;
+    display: block;
+    @media (min-width: $screen-tablet) {
+      margin: inherit;
+      margin-right: 10px;
+      float: left;
+    }
+    @at-root .footer & {
+      height: 55px;
+      width: 50px;
+    }
+  }
+  h1 {
+    color: white;
+    margin: 0;
+    font-size: 18px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 24px;
+    }
+  }
+  span {
+    font-size: 12px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 14px;
+    }
+    font-style: italic;
+    color: $lightblue;
+  }
+}

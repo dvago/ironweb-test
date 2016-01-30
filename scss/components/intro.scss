@@ -1,0 +1,32 @@
+.intro {
+  color: $blue;
+  padding: 30px 0 50px;
+  
+  h2 {
+    margin-bottom: 30px;
+  }
+  
+  div{
+    text-align: center;
+    
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+      display: table;
+    }
+  }
+  
+  i {
+    display: block;
+    margin-bottom: 15px;
+    
+    @media (min-width: $screen-sm-min) {
+      display: table-cell;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+  
+  span {
+    display: block;
+  }
+}

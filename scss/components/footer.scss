@@ -1,0 +1,87 @@
+.footer {
+  &__bluebar {
+    background: $footblue;
+    overflow: hidden;
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 5px 10px rgba(136, 136, 136, 0.3);
+    
+    .btn {
+      @extend .btn-round;
+      background: $redgradient;
+      color: white;
+      text-transform: uppercase;
+      padding: 0.5em 1em;
+      font-size: 15px;
+      border: 1px solid black;
+    }
+    
+    &-cta {
+      span {
+        font-size: 12px;
+        display: block;
+        color: $lightblue;
+        margin: 5px 0;
+      }
+    }
+    
+    &-secure {
+      span {
+        display: block;
+      }
+    }
+    
+    &-nav {
+      
+      h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        text-align: center;
+        
+        @media (min-width: $screen-sm-min) {
+          text-align: left;
+        }
+      }
+      
+      li {
+        text-align: center;
+        display: block;
+        margin: 15px 0;
+        
+        @media (min-width: $screen-sm-min) {
+          text-align: left;
+          margin: inherit;
+          display: inline-block;
+          padding-right: 8px;
+        }
+        
+        a {
+          color: white;
+          font-size: 13px;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  &__servicelinks {
+    text-align: center;
+    clear: both;
+    
+    li {
+      display: block;
+      padding: 0.4em;
+      
+      @media (min-width: $screen-sm-min) {
+        display: inline-block;
+        padding: 1em;
+      }
+      
+      a {
+        color: $blue;
+        font-size: 13px;
+        text-decoration: underline;
+      }
+    }
+  }
+}
