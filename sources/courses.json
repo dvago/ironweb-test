@@ -1,0 +1,72 @@
+{
+  "levels": {
+    "0": {
+      "Value": 0,
+      "Title": "débutants"
+    },
+    "1": {
+      "Value": 1,
+      "Title": "intermédiaires"
+    },
+    "2": {
+      "Value": 2,
+      "Title": "avancés"
+    }
+  },
+  "courses": {
+    "0": {
+      "Title": "Piano",
+      "ImageURL": "/images/piano.png",
+      "Level": [
+        0,
+        1,
+        2
+      ]
+    },
+    "1": {
+      "Title": "Basse",
+      "ImageURL": "/images/basse.png",
+      "Level": [
+        0,
+        1,
+        2
+      ]
+    },
+    "2": {
+      "Title": "Batterie",
+      "ImageURL": "/images/batterie.png",
+      "Level": [
+        0,
+        1,
+        2
+      ]
+    },
+    "3": {
+      "Title": "Chant",
+      "ImageURL": "/images/chant.png",
+      "Level": [
+        0,
+        1,
+        2
+      ]
+    },
+    "4": {
+      "Title": "Guitare acoustique",
+      "ImageURL": "/images/guitare-acoustique.png",
+      "Level": [
+        0,
+        1,
+        2
+      ]
+    },
+    "5": {
+      "Title": "Guitare éléctrique",
+      "ImageURL": "/images/guitare-electrique.png",
+      "Level": [
+        0,
+        1,
+        2
+      ]
+    }
+  }
+}

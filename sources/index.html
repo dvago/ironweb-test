@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appCourses">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iron Web Music</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container" ng-init="isVisible = false">
+      <div class="logo col-xs-12 col-sm-4">
+        <i class="piano"></i>
+        <h1>Cours de Musique</h1>
+        <span>Lorem ipsum ipsum lorem ipsum</span>
+        <a href="#" class="header__mobiletoggler visible-xs fa fa-2x fa-bars" ng-click="isVisible = !isVisible"></a>
+      </div>    
+      <nav class="col-xs-12 col-sm-6" ng-class="{'hidden-xs': !isVisible, 'visible-xs': isVisible}" ng-class="mobileClass" >
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Notre offre</a></li>
+          <li><a href="#" class="selected">Les cours</a></li>
+          <li><a href="#">Les instruments</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="col-sm-2">
+        <a href="#" class="btn"><i class="fa fa-user"></i> Me connecter</a>
+      </div>
+    </div>
+  </header>
+  <section class="stage">
+    <div class="container">
+      <div class="stage__placeholder"></div>
+      <div class="stage__box">
+        <h3>Les cours de piano</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae ligula sit amet turpis volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae ligula sit amet turpis volutpat. In vitae ligula sit amet turpis volutpat.</p>
+        <a href="#" class="btn">Decouvrez</a>
+      </div>
+    </div>
+  </section>
+  <section class="row intro">
+    <div class="container">
+      <h2 class="text-center">Cours de musique en ligne</h2>
+      <div class="col-xs-12 col-sm-4">
+        <i class="fa fa-2x fa-download"></i>
+        <span>Débutants à experts</span>
+        <span>Cours téléchargeables</span>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <i class="fa fa-2x fa-music"></i>
+        <span>5 instruments de musique</span>
+        <span>18 catégories</span>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <i class="fa fa-2x fa-tv"></i>
+        <span>Accès illimité 24h/24</span>
+        <span>Sur ordinateur & tablette</span>
+      </div>
+    </div>
+  </section>
+  <section class="courses" ng-controller="CourseController">
+   
+    <div class="row" ng-repeat="level in courseLevels">
+      <div class="container">
+        <h2 class="text-center">Nos cours {{level.Title}}</h2>
+        <ul>
+          <li class="col-sm-2" ng-repeat="item in courseItems" ng-show="{{item.Level}}.indexOf({{level.Value}})!=-1">
+            <div class="courses__thumbnail" ng-style="{'background-image':'url('+ item.ImageURL +')'}"></div>
+            <a href="#">{{item.Title}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer class="footer row">
+    <div class="footer__bluebar">
+      <div class="container">
+        <div class="col-xs-12 col-sm-3 text-center footer__bluebar-secure">
+          <i class="fa fa-3x fa-lock"></i>
+          <span>Paiement sécurisé</span>
+        </div>
+        <div class="col-xs-12 col-sm-6 footer__bluebar-nav">
+          <div class="logo">
+            <i class="piano hidden-xs"></i>
+            <h3>Cours de Musique</h3>
+            <ul>
+              <li>
+                <a href="#">Cours de Guitare</a>
+              </li>
+              <li>
+                <a href="#">Cours Piano</a>
+              </li>
+              <li>
+                <a href="#">Cours Basse</a>
+              </li>
+              <li>
+                <a href="#">Cours Batterie</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 text-center footer__bluebar-cta">
+          <a href="#" class="btn">Inscrivez vous</a>
+          <span>Accès illimité à tous les cours</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer__servicelinks row">
+      <ul>
+        <li><a href="#">Mention légale</a></li>
+        <li><a href="#">Conditions générales de vente</a></li>
+        <li><a href="#">Qui sommes nous?</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+
+</html>

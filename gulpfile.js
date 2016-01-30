@@ -28,7 +28,12 @@ gulp.task('move-images',function(){
   ],  {base: './images/'}) 
   .pipe(gulp.dest('./public/images/'));
 });
-
+gulp.task('source-to-prod',function(){
+  return gulp.src([
+    './sources/*.*'
+  ],  {base: './sources/'}) 
+  .pipe(gulp.dest('./public/'));
+});
 gulp.task('style', function () {
   return gulp.src([config.sassPath + '/style.scss'])
     .pipe($.sass())
@@ -53,5 +58,5 @@ gulp.task('watch', function () {
   gulp.watch(config.sassPath + '/**/*.scss', ['style'])
 })
 
-gulp.task('default', ['connect', 'move-images', 'watch']);
+gulp.task('default', [ 'source-to-prod', 'connect', 'move-images', 'watch']);
 gulp.task('build', ['uglify', 'minify-css']);
