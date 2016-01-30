@@ -58,5 +58,6 @@ gulp.task('watch', function () {
   gulp.watch(config.sassPath + '/**/*.scss', ['style'])
 })
 
-gulp.task('default', [ 'source-to-prod', 'connect', 'move-images', 'watch']);
+gulp.task('default', [ 'source-to-prod', 'style', 'browserify', 'connect', 'move-images']);
+gulp.task('dev', [ 'source-to-prod', 'move-images' 'watch', 'connect'])
 gulp.task('build', ['uglify', 'minify-css']);
