@@ -90,6 +90,8 @@
     height: 60px;
     width: 54px;
     display: block;
+    background-repeat: no-repeat;
+    
     @media (min-width: $screen-tablet) {
       margin: inherit;
       margin-right: 10px;

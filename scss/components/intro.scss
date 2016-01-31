@@ -17,11 +17,12 @@
   
   i {
     display: block;
-    margin-bottom: 15px;
+    margin: 15px 0;
     
     @media (min-width: $screen-sm-min) {
       display: table-cell;
       vertical-align: middle;
+      margin: 0;
       margin-right: 10px;
     }
   }

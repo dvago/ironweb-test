@@ -26,6 +26,10 @@
     }
     
     &-secure {
+      margin-bottom: 20px; 
+      @media (min-width: $screen-sm-min) {
+        margin: 0;
+      }
       span {
         display: block;
       }

@@ -71,7 +71,7 @@
       <div class="container">
         <h2 class="text-center">Nos cours {{level.Title}}</h2>
         <ul>
-          <li class="col-sm-2" ng-repeat="item in courseItems" ng-show="{{item.Level}}.indexOf({{level.Value}})!=-1">
+          <li class="col-xs-6 col-sm-2" ng-repeat="item in courseItems" ng-show="{{item.Level}}.indexOf({{level.Value}})!=-1">
             <div class="courses__thumbnail" ng-style="{'background-image':'url('+ item.ImageURL +')'}"></div>
             <a href="#">{{item.Title}}</a>
           </li>
